@@ -1,0 +1,128 @@
+/* =====================================================
+   FILE: frontend/src/styles/index.css
+   DESKRIPSI: Main styles entry point
+   ===================================================== */
+
+/* Import all style files */
+@import './variables.css';
+@import './tailwind.css';
+@import './globals.css';
+@import './typography.css';
+@import './colors.css';
+@import './animations.css';
+@import './components.css';
+@import './forms.css';
+@import './buttons.css';
+@import './cards.css';
+@import './tables.css';
+@import './modals.css';
+@import './utilities.css';
+@import './responsive.css';
+@import './print.css';
+@import './darkMode.css';
+@import './bloodTypes.css';
+@import './status.css';
+@import './dashboard.css';
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-height);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+  border-radius: var(--scrollbar-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: var(--scrollbar-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+/* Focus outline */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Section spacing */
+.section {
+  padding: var(--section-spacing) 0;
+}
+
+.section-sm {
+  padding: calc(var(--section-spacing) / 2) 0;
+}
+
+.section-lg {
+  padding: calc(var(--section-spacing) * 1.5) 0;
+}

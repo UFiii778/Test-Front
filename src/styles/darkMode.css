@@ -1,0 +1,417 @@
+/* =====================================================
+   FILE: frontend/src/styles/darkMode.css
+   DESKRIPSI: Dark mode styles
+   ===================================================== */
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --color-primary-50: #7f1d1d;
+  --color-primary-100: #991b1b;
+  --color-primary-200: #b91c1c;
+  --color-primary-300: #dc2626;
+  --color-primary-400: #ef4444;
+  --color-primary-500: #f87171;
+  --color-primary-600: #fca5a5;
+  --color-primary-700: #fecaca;
+  --color-primary-800: #fee2e2;
+  --color-primary-900: #fef2f2;
+  --color-primary-950: #fff1f1;
+
+  --color-secondary-50: #020617;
+  --color-secondary-100: #0f172a;
+  --color-secondary-200: #1e293b;
+  --color-secondary-300: #334155;
+  --color-secondary-400: #475569;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #94a3b8;
+  --color-secondary-700: #cbd5e1;
+  --color-secondary-800: #e2e8f0;
+  --color-secondary-900: #f1f5f9;
+  --color-secondary-950: #f8fafc;
+
+  --color-success-50: #052e16;
+  --color-success-100: #14532d;
+  --color-success-200: #166534;
+  --color-success-300: #15803d;
+  --color-success-400: #16a34a;
+  --color-success-500: #22c55e;
+  --color-success-600: #4ade80;
+  --color-success-700: #86efac;
+  --color-success-800: #bbf7d0;
+  --color-success-900: #dcfce7;
+  --color-success-950: #f0fdf4;
+
+  --color-warning-50: #422006;
+  --color-warning-100: #713f12;
+  --color-warning-200: #854d0e;
+  --color-warning-300: #a16207;
+  --color-warning-400: #ca8a04;
+  --color-warning-500: #eab308;
+  --color-warning-600: #facc15;
+  --color-warning-700: #fde047;
+  --color-warning-800: #fef08a;
+  --color-warning-900: #fef9c3;
+  --color-warning-950: #fefce8;
+
+  --color-danger-50: #450a0a;
+  --color-danger-100: #7f1d1d;
+  --color-danger-200: #991b1b;
+  --color-danger-300: #b91c1c;
+  --color-danger-400: #dc2626;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #f87171;
+  --color-danger-700: #fca5a5;
+  --color-danger-800: #fecaca;
+  --color-danger-900: #fee2e2;
+  --color-danger-950: #fef2f2;
+
+  --color-info-50: #172554;
+  --color-info-100: #1e3a8a;
+  --color-info-200: #1e40af;
+  --color-info-300: #1d4ed8;
+  --color-info-400: #2563eb;
+  --color-info-500: #3b82f6;
+  --color-info-600: #60a5fa;
+  --color-info-700: #93c5fd;
+  --color-info-800: #bfdbfe;
+  --color-info-900: #dbeafe;
+  --color-info-950: #eff6ff;
+
+  --color-text: #f3f4f6;
+  --color-text-light: #9ca3af;
+  --color-text-lighter: #6b7280;
+  --color-text-dark: #f9fafb;
+  --color-text-darker: #ffffff;
+
+  --color-background: #111827;
+  --color-background-alt: #1f2937;
+  --color-background-card: #1f2937;
+  --color-background-input: #374151;
+
+  --color-border: #374151;
+  --color-border-light: #4b5563;
+  --color-border-dark: #1f2937;
+
+  --color-scrollbar-track: #1f2937;
+  --color-scrollbar-thumb: #4b5563;
+  --color-scrollbar-thumb-hover: #6b7280;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--color-background-card);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .sidebar {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: var(--color-background-card);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .input,
+[data-theme="dark"] .form-control {
+  background-color: var(--color-background-input);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .input:focus,
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--color-primary-600);
+  background-color: var(--color-background-input);
+}
+
+[data-theme="dark"] .btn-light {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .btn-light:hover {
+  background-color: var(--color-background-input);
+}
+
+[data-theme="dark"] .table {
+  background-color: var(--color-background-card);
+}
+
+[data-theme="dark"] .table thead {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .table tbody tr:hover {
+  background-color: var(--color-background-alt);
+}
+
+[data-theme="dark"] .table-striped tbody tr:nth-child(even) {
+  background-color: var(--color-background-alt);
+}
+
+[data-theme="dark"] .badge {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .alert {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--color-background-card);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: var(--color-background-input);
+}
+
+[data-theme="dark"] .tooltip-content {
+  background-color: var(--color-background-alt);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .progress-bar {
+  background-color: var(--color-background-input);
+}
+
+[data-theme="dark"] .progress-bar-fill {
+  background-color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .divider {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .divider-text::before,
+[data-theme="dark"] .divider-text::after {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .pagination-item {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .pagination-item:hover:not(.disabled) {
+  background-color: var(--color-background-input);
+}
+
+[data-theme="dark"] .pagination-item.active {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+[data-theme="dark"] .breadcrumb-item a:hover {
+  color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .tabs {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .tab {
+  color: var(--color-text-light);
+}
+
+[data-theme="dark"] .tab:hover {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .tab.active {
+  color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+/* Dark mode specific utilities */
+[data-theme="dark"] .bg-white {
+  background-color: var(--color-background-card) !important;
+}
+
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-700,
+[data-theme="dark"] .text-gray-800,
+[data-theme="dark"] .text-gray-900 {
+  color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300 {
+  border-color: var(--color-border) !important;
+}
+
+[data-theme="dark"] .bg-gray-50,
+[data-theme="dark"] .bg-gray-100 {
+  background-color: var(--color-background-alt) !important;
+}
+
+/* Dark mode images */
+[data-theme="dark"] img {
+  opacity: 0.8;
+  transition: opacity var(--transition-fast) var(--transition-timing);
+}
+
+[data-theme="dark"] img:hover {
+  opacity: 1;
+}
+
+/* Dark mode scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+/* Dark mode shadows */
+[data-theme="dark"] .shadow-sm,
+[data-theme="dark"] .shadow-md,
+[data-theme="dark"] .shadow-lg,
+[data-theme="dark"] .shadow-xl {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode code blocks */
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: var(--color-background-input);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+/* Dark mode blockquotes */
+[data-theme="dark"] blockquote {
+  border-left-color: var(--color-primary-600);
+  background-color: var(--color-background-alt);
+}
+
+/* Dark mode mark */
+[data-theme="dark"] mark {
+  background-color: var(--color-warning-800);
+  color: var(--color-text);
+}
+
+/* Dark mode kbd */
+[data-theme="dark"] kbd {
+  background-color: var(--color-background-input);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+/* Dark mode selection */
+[data-theme="dark"] ::selection {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+/* Dark mode placeholders */
+[data-theme="dark"] ::placeholder {
+  color: var(--color-text-lighter);
+  opacity: 1;
+}
+
+/* Dark mode disabled elements */
+[data-theme="dark"] :disabled {
+  opacity: 0.5;
+  background-color: var(--color-background-alt) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Dark mode focus outlines */
+[data-theme="dark"] :focus-visible {
+  outline-color: var(--color-primary-600);
+}
+
+/* Dark mode SVG icons */
+[data-theme="dark"] svg {
+  fill: currentColor;
+}
+
+/* Dark mode specific toggles */
+.dark-mode-toggle {
+  position: relative;
+  width: 56px;
+  height: 28px;
+  border-radius: 34px;
+  background-color: var(--color-secondary-600);
+  cursor: pointer;
+  transition: background-color var(--transition-base) var(--transition-timing);
+}
+
+.dark-mode-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform var(--transition-base) var(--transition-timing);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .dark-mode-toggle {
+  background-color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .dark-mode-toggle::after {
+  transform: translateX(28px);
+}
+
+/* Dark mode transitions */
+[data-theme="dark"] * {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: var(--transition-base);
+  transition-timing-function: var(--transition-timing);
+}
+
+/* Dark mode print */
+@media print {
+  [data-theme="dark"] body {
+    background: white !important;
+    color: black !important;
+  }
+}

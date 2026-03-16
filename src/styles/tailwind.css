@@ -1,0 +1,440 @@
+/* =====================================================
+   FILE: frontend/src/styles/tailwind.css
+   DESKRIPSI: Tailwind CSS imports and custom directives
+   ===================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Custom base styles */
+  h1 {
+    @apply text-4xl font-bold md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-bold md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl font-bold md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg font-bold md:text-xl;
+  }
+
+  h6 {
+    @apply text-base font-bold md:text-lg;
+  }
+
+  /* Form elements */
+  input, select, textarea {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  /* Remove spinner from number inputs */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center font-medium transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 
+           disabled:cursor-not-allowed rounded-xl;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 
+           focus:ring-primary-500 shadow-lg shadow-primary-200;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-gray-700 border-2 border-gray-200 
+           hover:border-primary-300 hover:text-primary-600 
+           focus:ring-primary-500 shadow-sm;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary-600 text-primary-600 
+           hover:bg-primary-50 focus:ring-primary-500;
+  }
+
+  .btn-danger {
+    @apply btn bg-danger-600 text-white hover:bg-danger-700 
+           focus:ring-danger-500 shadow-lg shadow-danger-200;
+  }
+
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700 
+           focus:ring-success-500 shadow-lg shadow-success-200;
+  }
+
+  .btn-warning {
+    @apply btn bg-warning-600 text-white hover:bg-warning-700 
+           focus:ring-warning-500 shadow-lg shadow-warning-200;
+  }
+
+  .btn-info {
+    @apply btn bg-info-600 text-white hover:bg-info-700 
+           focus:ring-info-500 shadow-lg shadow-info-200;
+  }
+
+  .btn-ghost {
+    @apply btn text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+  }
+
+  .btn-link {
+    @apply btn text-primary-600 hover:text-primary-700 underline underline-offset-2;
+  }
+
+  /* Button sizes */
+  .btn-xs {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-md {
+    @apply px-6 py-3 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  .btn-xl {
+    @apply px-10 py-5 text-lg;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl 
+           transition-shadow duration-200 border border-gray-100;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gray-200 
+           focus:border-primary-400 focus:ring-2 focus:ring-primary-100 
+           outline-none transition-all duration-200 bg-white
+           disabled:bg-gray-100 disabled:cursor-not-allowed;
+  }
+
+  .input-error {
+    @apply border-danger-500 focus:border-danger-500 focus:ring-danger-100;
+  }
+
+  .input-success {
+    @apply border-success-500 focus:border-success-500 focus:ring-success-100;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .input-helper {
+    @apply text-xs text-gray-500 mt-1;
+  }
+
+  .input-error-text {
+    @apply text-xs text-danger-600 mt-1;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-800;
+  }
+
+  .badge-success {
+    @apply badge bg-success-100 text-success-800;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-800;
+  }
+
+  .badge-danger {
+    @apply badge bg-danger-100 text-danger-800;
+  }
+
+  .badge-info {
+    @apply badge bg-info-100 text-info-800;
+  }
+
+  .badge-secondary {
+    @apply badge bg-secondary-100 text-secondary-800;
+  }
+
+  /* Alerts */
+  .alert {
+    @apply p-4 rounded-xl border;
+  }
+
+  .alert-success {
+    @apply alert bg-success-50 border-success-200 text-success-800;
+  }
+
+  .alert-warning {
+    @apply alert bg-warning-50 border-warning-200 text-warning-800;
+  }
+
+  .alert-error {
+    @apply alert bg-danger-50 border-danger-200 text-danger-800;
+  }
+
+  .alert-info {
+    @apply alert bg-info-50 border-info-200 text-info-800;
+  }
+
+  /* Tables */
+  .table-container {
+    @apply overflow-x-auto rounded-xl border border-gray-200;
+  }
+
+  .table {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+
+  .table thead {
+    @apply bg-gray-50;
+  }
+
+  .table th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+
+  .table tbody {
+    @apply bg-white divide-y divide-gray-200;
+  }
+
+  .table td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+  }
+
+  .table tr:hover {
+    @apply bg-gray-50;
+  }
+
+  /* Modals */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto;
+  }
+
+  /* Loaders */
+  .spinner {
+    @apply animate-spin rounded-full border-4 border-gray-200 border-t-primary-600;
+  }
+
+  .spinner-sm {
+    @apply w-6 h-6 border-2;
+  }
+
+  .spinner-md {
+    @apply w-10 h-10 border-4;
+  }
+
+  .spinner-lg {
+    @apply w-16 h-16 border-4;
+  }
+
+  /* Progress bars */
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2.5 overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply bg-primary-600 h-full rounded-full transition-all duration-300;
+  }
+
+  /* Dividers */
+  .divider {
+    @apply border-t border-gray-200 my-6;
+  }
+
+  .divider-text {
+    @apply flex items-center text-gray-500 text-sm;
+  }
+
+  .divider-text::before,
+  .divider-text::after {
+    @apply flex-1 content-[''] border-t border-gray-200;
+  }
+
+  .divider-text::before {
+    @apply mr-4;
+  }
+
+  .divider-text::after {
+    @apply ml-4;
+  }
+
+  /* Avatars */
+  .avatar {
+    @apply rounded-full object-cover;
+  }
+
+  .avatar-xs {
+    @apply w-6 h-6;
+  }
+
+  .avatar-sm {
+    @apply w-8 h-8;
+  }
+
+  .avatar-md {
+    @apply w-12 h-12;
+  }
+
+  .avatar-lg {
+    @apply w-16 h-16;
+  }
+
+  .avatar-xl {
+    @apply w-20 h-20;
+  }
+
+  .avatar-2xl {
+    @apply w-24 h-24;
+  }
+
+  /* Tooltips */
+  .tooltip {
+    @apply relative inline-block;
+  }
+
+  .tooltip .tooltip-text {
+    @apply invisible absolute z-50 bg-gray-900 text-white text-sm rounded-lg py-2 px-3 
+           whitespace-nowrap opacity-0 transition-opacity duration-300;
+  }
+
+  .tooltip:hover .tooltip-text {
+    @apply visible opacity-100;
+  }
+
+  /* Tooltip positions */
+  .tooltip-top .tooltip-text {
+    @apply bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2;
+  }
+
+  .tooltip-bottom .tooltip-text {
+    @apply top-full left-1/2 transform -translate-x-1/2 translate-y-2 mt-2;
+  }
+
+  .tooltip-left .tooltip-text {
+    @apply right-full top-1/2 transform -translate-y-1/2 -translate-x-2 mr-2;
+  }
+
+  .tooltip-right .tooltip-text {
+    @apply left-full top-1/2 transform -translate-y-1/2 translate-x-2 ml-2;
+  }
+
+  /* Dropdown */
+  .dropdown {
+    @apply relative inline-block;
+  }
+
+  .dropdown-menu {
+    @apply absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg 
+           ring-1 ring-black ring-opacity-5 focus:outline-none z-50;
+  }
+
+  .dropdown-item {
+    @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 
+           w-full text-left transition-colors;
+  }
+
+  /* Tabs */
+  .tabs {
+    @apply border-b border-gray-200;
+  }
+
+  .tab-list {
+    @apply flex -mb-px space-x-8;
+  }
+
+  .tab {
+    @apply py-4 px-1 border-b-2 font-medium text-sm transition-colors;
+  }
+
+  .tab-active {
+    @apply border-primary-600 text-primary-600;
+  }
+
+  .tab-inactive {
+    @apply border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300;
+  }
+
+  /* Pagination */
+  .pagination {
+    @apply flex items-center justify-center space-x-2;
+  }
+
+  .pagination-item {
+    @apply w-10 h-10 flex items-center justify-center rounded-lg 
+           text-sm font-medium transition-colors;
+  }
+
+  .pagination-item-active {
+    @apply bg-primary-600 text-white;
+  }
+
+  .pagination-item-inactive {
+    @apply text-gray-700 hover:bg-gray-100;
+  }
+
+  /* Forms */
+  .form-group {
+    @apply space-y-1 mb-4;
+  }
+
+  .form-row {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+
+  /* Blood type colors */
+  .blood-type-a {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .blood-type-b {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .blood-type-ab {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  .blood-type-o {
+    @apply bg-red-100 text-red-800;
+  }
+}
